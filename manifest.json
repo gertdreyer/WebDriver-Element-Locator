@@ -15,11 +15,8 @@
     }
   ],
   "permissions": [
-    "storage",
     "contextMenus",
-    "activeTab",
-    "clipboardWrite",
-    "clipboardRead"
+    "clipboardWrite"
   ],
   "icons": { "32": "webdev-32.png", "64": "webdev-64.png" }
 }
