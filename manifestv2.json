@@ -1,0 +1,24 @@
+{
+  "name": "Selenuim Element Locator",
+  "description": "Chrome Port of WebDriver Element Locator",
+  "version": "1.2",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ],
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "activeTab",
+    "clipboardWrite",
+    "clipboardRead"
+  ]
+}
