@@ -267,7 +267,7 @@ document.addEventListener("mousedown", function (event) {
   }
 });
 chrome.runtime.onMessage.addListener(function (message) {
-    console.log(message);
+  console.log(message);
   if (message.type == "copy") {
     console.log("coping to clipboard");
     navigator.clipboard.writeText(message.data);
