@@ -5,7 +5,7 @@ chrome.runtime.onInstalled.addListener(() => {
     console.log(x.menuItemId);
     let matches;
     if ((matches = re.exec(x.menuItemId)) !== null) {
-      console.log("sending copy to tab",matches);
+      console.log("sending copy to tab", matches);
       chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         chrome.tabs.sendMessage(tabs[0].id, {
           type: "copy",
