@@ -263,7 +263,11 @@ document.addEventListener("mousedown", function (event) {
     resultArrays.push(javaRefsArr);
 
     console.log("Result array length: " + resultArrays.length);
-    chrome.runtime.sendMessage({ type: "locators", data: resultArrays });
+    try {
+      chrome.runtime.sendMessage({ type: "locators", data: resultArrays });
+    } catch (error) {
+      console.error(error);
+    }
   }
 });
 chrome.runtime.onMessage.addListener(function (message) {
